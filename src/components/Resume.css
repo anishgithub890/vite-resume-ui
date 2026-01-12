@@ -171,6 +171,13 @@
   page-break-inside: avoid;
 }
 
+.experience-item.property-marketplace {
+  page-break-before: always;
+  page-break-inside: avoid;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
 .experience-header {
   margin-bottom: 8px;
   display: flex;
@@ -237,6 +244,11 @@
   }
 
   .experience-item {
+    page-break-inside: avoid;
+  }
+
+  .experience-item.property-marketplace {
+    page-break-before: always;
     page-break-inside: avoid;
   }
 }

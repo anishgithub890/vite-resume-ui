@@ -196,6 +196,7 @@ const Resume = ({ profileImage }: ResumeProps) => {
             <p><strong>Real-time/Infra:</strong> Socket.io, Docker, Docker Compose</p>
             <p><strong>Auth/Security:</strong> JWT, RBAC/Permissions, OAuth, 2FA (implementation exposure), Rate limiting</p>
             <p><strong>Tools:</strong> Git, Postman, Figma, Prisma Studio, AWS (basic)</p>
+            <p><strong>Other:</strong> System Design, Problem Solving, Critical Thinking</p>
           </div>
         </section>
 
@@ -224,7 +225,7 @@ const Resume = ({ profileImage }: ResumeProps) => {
             </div>
 
             {/* Experience 2 */}
-            <div className="experience-item">
+            <div className="experience-item property-marketplace">
               <div className="experience-header">
                 <h3 className="company-name">Chaturvedi Software House LLC</h3>
                 <span className="job-title">— Full Stack Lead Developer (Property Marketplace)</span>
@@ -245,7 +246,7 @@ const Resume = ({ profileImage }: ResumeProps) => {
                 <h3 className="company-name">Chaturvedi Software House LLC</h3>
                 <span className="job-title">— Full Stack Developer (Real Estate Management System)</span>
                 <span className="location">| Dubai, UAE</span>
-                <span className="date">| 2025 – Present</span>
+                <span className="date">| 2024 – Present</span>
               </div>
               <ul className="experience-bullets">
                 <li>Built a multi-tenant RMS web app with role-based authentication (Admin, Tenant, Landlord) and operational modules for contracts, payments, and maintenance workflows.</li>
@@ -261,15 +262,16 @@ const Resume = ({ profileImage }: ResumeProps) => {
                 <h3 className="company-name">Channakya Software Private Limited</h3>
                 <span className="job-title">— Full Stack Developer</span>
                 <span className="location">| Kathmandu, Nepal</span>
-                <span className="date">| Feb 2022 – Nov 2022</span>
+                <span className="date">| Oct 2022 – Nov 2023</span>
               </div>
               <ul className="experience-bullets">
                 <li>Built Banking Application Admin UI with responsive React + TypeScript components and role-based screens.</li>
                 <li>Developed a Nepal Tourism backend project using Node.js and MongoDB, including REST APIs and data modeling.</li>
+                <li>Built Full Stack Job Portal with React and React Native frontend, Node.js backend, and MySQL database for job listings and candidate management.</li>
                 <li>Developed backend APIs using Node.js; integrated MySQL/MongoDB; delivered responsive frontend features using React and TypeScript.</li>
                 <li>Supported a .NET eCommerce project and performed API testing across modules.</li>
               </ul>
-              <p className="tech-stack"><strong>Tech:</strong> React, TypeScript, Node.js, MongoDB, MySQL, .NET Framework</p>
+              <p className="tech-stack"><strong>Tech:</strong> React, React Native, TypeScript, Node.js, MongoDB, MySQL, .NET Framework</p>
             </div>
 
             {/* Experience 5 */}
