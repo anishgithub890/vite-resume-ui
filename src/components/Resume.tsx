@@ -191,7 +191,7 @@ const Resume = ({ profileImage }: ResumeProps) => {
         <section className="resume-section">
           <h2 className="section-title">SKILLS</h2>
           <div className="section-content">
-            <p><strong>Programming Languages:</strong> TypeScript, JavaScript, Python, Go (Golang), Java</p>
+            <p><strong>Programming Languages:</strong> TypeScript, JavaScript, Python, Go (Golang), Java, .NET (C#)</p>
             <p><strong>Frontend:</strong> React, Next.js, Tailwind CSS, HTML/CSS, shadcn/ui, Zustand, Redux Toolkit, TanStack React Query</p>
             <p><strong>Backend:</strong> Node.js, Express.js, REST APIs, GraphQL (basic), Laravel (prior)</p>
             <p><strong>Databases/ORM:</strong> MySQL, MongoDB, Prisma, Mongoose, Redis</p>
