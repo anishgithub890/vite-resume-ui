@@ -44,7 +44,7 @@ const Resume = ({ profileImage }: ResumeProps) => {
       )
 
       const canvas = await html2canvas(resumeRef.current, {
-        scale: 3,
+        scale: 1.5,
         useCORS: true,
         logging: false,
         backgroundColor: '#ffffff',
@@ -54,6 +54,7 @@ const Resume = ({ profileImage }: ResumeProps) => {
         windowHeight: resumeRef.current.scrollHeight,
         allowTaint: false,
         imageTimeout: 15000,
+        removeContainer: true,
       })
 
       const pdf = new jsPDF('p', 'mm', 'a4')
@@ -66,10 +67,11 @@ const Resume = ({ profileImage }: ResumeProps) => {
       const imgWidth = canvas.width
       const imgHeight = canvas.height
       
-      // Convert pixels to mm (at scale 3: 1px = 0.264583mm / 3)
+      // Convert pixels to mm (at scale 1.5: 1px = 0.264583mm / 1.5)
       const pxToMm = 0.264583
-      const imgWidthMm = (imgWidth / 3) * pxToMm
-      const imgHeightMm = (imgHeight / 3) * pxToMm
+      const scaleFactor = 1.5
+      const imgWidthMm = (imgWidth / scaleFactor) * pxToMm
+      const imgHeightMm = (imgHeight / scaleFactor) * pxToMm
       
       // Calculate ratio to fit content width exactly
       const ratio = contentWidth / imgWidthMm
@@ -85,8 +87,8 @@ const Resume = ({ profileImage }: ResumeProps) => {
         }
 
         const pageHeight = Math.min(contentHeight, remainingHeight)
-        const sourceY = (scaledHeight - remainingHeight) / ratio / pxToMm * 3
-        const sourceHeight = (pageHeight / ratio / pxToMm) * 3
+        const sourceY = (scaledHeight - remainingHeight) / ratio / pxToMm * scaleFactor
+        const sourceHeight = (pageHeight / ratio / pxToMm) * scaleFactor
 
         // Create canvas slice for this page
         const pageCanvas = document.createElement('canvas')
@@ -105,8 +107,8 @@ const Resume = ({ profileImage }: ResumeProps) => {
             imgWidth, pageCanvas.height
           )
           
-          const pageImgData = pageCanvas.toDataURL('image/png', 1.0)
-          pdf.addImage(pageImgData, 'PNG', margin, margin, contentWidth, pageHeight)
+          const pageImgData = pageCanvas.toDataURL('image/jpeg', 0.85)
+          pdf.addImage(pageImgData, 'JPEG', margin, margin, contentWidth, pageHeight)
         }
 
         remainingHeight -= contentHeight
@@ -146,7 +148,7 @@ const Resume = ({ profileImage }: ResumeProps) => {
           <div className="header-content">
             <div className="header-text">
               <h1 className="name">ANISH MAHATO</h1>
-              <h2 className="title">Full Stack Engineer</h2>
+              <h2 className="title">Full Stack Software Engineer</h2>
               <div className="contact-info">
                 <span>Dubai, UAE</span>
                 <span>|</span>
